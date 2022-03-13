@@ -1,6 +1,6 @@
 package com.devsuperior.dsmovie.entities;
 
-import com.devsuperior.dsmovie.dto.MovieDto;
+import com.devsuperior.dsmovie.dto.MovieDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,9 @@ import lombok.Setter;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -28,8 +30,10 @@ public class Movie {
     private Integer count;
     @Column
     private String image;
+    @OneToMany(mappedBy = "id.movie")
+    private Set<Score> scores = new HashSet<Score>();
 
-    public Movie(MovieDto m) {
+    public Movie(MovieDTO m) {
         this.id = m.getId();
         this.title = m.getTitle();
         this.score = m.getScore();
