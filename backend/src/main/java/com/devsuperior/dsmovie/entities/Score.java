@@ -19,10 +19,4 @@ public class Score {
     @Column
     private Double value;
 
-    public void setMovie(Movie m){
-        id.setMovie(m);
-    }
-    public void setUser(User u){
-        id.setUser(u);
-    }
 }

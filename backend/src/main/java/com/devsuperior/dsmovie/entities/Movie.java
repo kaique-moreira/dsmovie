@@ -1,5 +1,6 @@
 package com.devsuperior.dsmovie.entities;
 
+import com.devsuperior.dsmovie.dto.MovieDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,13 @@ public class Movie {
     @Column
     private String image;
 
+    public Movie(MovieDto m) {
+        this.id = m.getId();
+        this.title = m.getTitle();
+        this.score = m.getScore();
+        this.count = m.getCount();
+        this.image = m.getImage();
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

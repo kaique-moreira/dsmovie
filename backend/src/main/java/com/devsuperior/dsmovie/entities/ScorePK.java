@@ -1,6 +1,5 @@
 package com.devsuperior.dsmovie.entities;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
