@@ -13,9 +13,3 @@ html, body {
     background-color: #E5E5E5;
 
 }
-
-a, a:hover {
-  text-decoration: none;
-  color: unset;
-  cursor: pointer;
-}
